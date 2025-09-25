@@ -1,0 +1,14 @@
+# Ignorar archivos del sistema y personales
+.*
+!.gitignore
+
+# Ignorar carpetas globales
+.vscode/
+__pycache__/
+*.pyc
+*.zip
+*.mkv
+*.tmp
+*.lock
+*.log
+*.swp
