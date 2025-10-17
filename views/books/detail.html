@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+<h1>Detalle del Libro</h1>
+
+<div class="book-detail">
+    <div class="book-image">
+        {% if book.img %}
+            <img src="{{ book.img }}" alt="Portada de {{ book.title }}">
+        {% else %}
+            <div class="no-image">Sin imagen</div>
+        {% endif %}
+    </div>
+
+    <div class="book-info">
+        <h2>{{ book.title }}</h2>
+        <p class="author">por <strong>{{ book.author }}</strong></p>
+
+        <p><strong>ISBN13:</strong> {{ book.isbn13 }}</p>
+        <p><strong>Formato:</strong> {{ book.bookformat }}</p>
+        <p><strong>Género:</strong> {{ book.genre }}</p>
+        <p><strong>Páginas:</strong> {{ book.pages }}</p>
+        <p><strong>Rating:</strong> {{ book.rating }}</p>
+        <p><strong>Reviews:</strong> {{ book.reviews }}</p>
+        <p><strong>Total Ratings:</strong> {{ book.totalratings }}</p>
+
+        {% if book.description %}
+            <p class="description"><strong>Descripción:</strong> {{ book.description }}</p>
+        {% endif %}
+
+        <div class="book-actions">
+            {% if book.link %}
+                <a href="{{ book.link }}" target="_blank" class="btn btn-primary">Ver más</a>
+            {% endif %}
+            <a href="/books" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

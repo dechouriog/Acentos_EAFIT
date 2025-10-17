@@ -1,0 +1,326 @@
+/* General */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+    color: #333;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* Buttons */
+.btn, button {
+    background: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.btn:hover, button:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #565e64;
+}
+
+.btn-danger {
+    background: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #b02a37;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+/* Forms */
+form {
+    margin-top: 15px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+/* Alinear botones en acciones */
+.btn-group {
+    display: flex;
+    gap: 6px;  /* separación entre botones */
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+/* Para que el form no rompa la fila */
+.inline-form {
+    display: inline;
+    margin: 0;
+}
+
+/* RESET para barra de búsqueda - fuerza comportamiento idéntico */
+.search-bar, .search-form { box-sizing: border-box; font-family: inherit; }
+
+/* contenedor */
+.search-bar {
+  display: flex;
+  align-items: center;   /* centra todo verticalmente */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* form interno - ocupa el espacio disponible */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0; /* importante para que el input pueda encoger en contenedores flex */
+}
+
+/* estilo común y reset para input/button/a */
+.search-form input[type="text"],
+.search-form button,
+.search-bar a.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  display: inline-flex;        /* crucial: que input/button/a se comporten igual */
+  align-items: center;
+  justify-content: center;
+
+  height: 35px;                /* misma altura explícita */
+  padding: 0 14px;             /* padding horizontal uniforme */
+  font-size: 14px;
+  line-height: 1;              /* evita desplazamientos por line-height */
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;   /* mismo borde para todos -> mismo box */
+  box-sizing: border-box;      /* que la altura incluya borde/padding */
+  margin: 0;                   /* elimina márgenes por defecto */
+  vertical-align: middle;
+  color: #222;
+}
+
+/* Input ocupa todo lo que quede */
+.search-form input[type="text"] {
+  flex: 1;
+  min-width: 0;      /* permite que flex shrink funcione dentro de contenedores */
+  padding-left: 12px;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+}
+
+/* Botones: mismo tamaño visual, colores distintos */
+.search-form button, .search-bar a.btn {
+  min-width: 86px;   /* evita que el botón se haga muy pequeño */
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* quitar outline feo, pero mantener accesibilidad: usar outline personalizado */
+.search-form input:focus,
+.search-form button:focus,
+.search-bar a.btn:focus {
+  outline: 3px solid rgba(0,123,255,0.15);
+  outline-offset: 2px;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;  /* centra horizontalmente */
+    align-items: center;
+    gap: 12px;                /* espacio entre botones y texto */
+    margin-top: 20px;
+}
+
+.pagination .btn {
+    min-width: 80px;         /* todos igual de anchos */
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.page-info {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Dar aire entre los elementos del form */
+form label, 
+form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; /* espacio entre campos */
+}
+
+/* Alinear y separar botones */
+form .form-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;             /* separación entre botones */
+    justify-content: flex-end;
+}
+
+/* --- Detalle del libro --- */
+.book-detail {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.book-image img {
+    max-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.no-image {
+    width: 220px;
+    height: 300px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-radius: 6px;
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.book-info h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.book-info .author {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.book-info p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.book-info .description {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.book-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}

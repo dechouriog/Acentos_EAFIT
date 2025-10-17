@@ -1,0 +1,35 @@
+./
+├── .gitignore
+├── controllers
+│   ├── auth_controller.py
+│   ├── books_controller.py
+│   └── home_controller.py
+├── db
+│   └── config.py
+├── main.py
+├── models
+│   ├── books.py
+│   └── user.py
+├── requirements.txt
+├── routes
+│   ├── auth_routes.py
+│   ├── books_routes.py
+│   └── home_routes.py
+├── static
+│   ├── img
+│   │   └── acentos.jpg
+│   └── styles.css
+├── tree.py
+├── tree.txt
+├── utils
+│   └── auth.py
+└── views
+    ├── base.html
+    ├── books
+    │   ├── create.html
+    │   ├── detail.html
+    │   ├── edit.html
+    │   └── list.html
+    ├── home.html
+    ├── login.html
+    └── register.html

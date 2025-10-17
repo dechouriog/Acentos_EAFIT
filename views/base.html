@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Librería{% endblock %}</title>
+    <link rel="icon" href="/static/img/acentos.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/">Librería</a>
+            <a href="/books">Libros</a>
+            <a href="/books/create">Agregar Libro</a>
+            {% if current_user %}
+            <span>Bienvenido, {{ current_user.name }}!</span>
+            <a href="/logout">Cerrar sesión</a>
+            {% else %}
+            <a href="/login">Iniciar sesión</a>
+            <a href="/register">Registrarse</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 Librería Acentos</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1>Bienvenido a la Librería Acentos EAFIT</h1>
+<p>Explora nuestra colección de libros</p>
+
+<h2>Últimos libros</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th><th>Título</th><th>Autor</th><th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in libros %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td><a href="/books/{{ book.id }}" class="btn btn-secondary btn-sm">Ver</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
