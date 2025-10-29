@@ -15,13 +15,14 @@
             <a href="/">Librería</a>
             <a href="/books">Libros</a>
             <a href="/books/create">Agregar Libro</a>
-            {% if current_user %}
-            <span>Bienvenido, {{ current_user.name }}!</span>
-            <a href="/logout">Cerrar sesión</a>
-            {% else %}
-            <a href="/login">Iniciar sesión</a>
-            <a href="/register">Registrarse</a>
-            {% endif %}
+            {% if request.state.user %}
+  <span>Bienvenido, {{ request.state.user.name }}!</span>
+  <a href="/logout">Cerrar sesión</a>
+{% else %}
+  <a href="/login">Iniciar sesión</a>
+  <a href="/register">Registrarse</a>
+{% endif %}
+
         </nav>
     </header>
 

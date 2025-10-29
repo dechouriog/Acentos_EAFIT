@@ -1,6 +1,8 @@
 from fastapi import Request, Response
 from datetime import datetime, timedelta
 import jwt
+from db.config import SessionLocal
+from models.user import User
 
 SECRET_KEY = "mi_secreto_super_seguro"
 ALGORITHM = "HS256"
@@ -19,7 +21,15 @@ def get_current_user(request: Request):
         return None
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        return payload.get("sub")  # devuelve el username
+        username = payload.get("sub")
+        if not username:
+            return None
+        db = SessionLocal()
+        try:
+            user = db.query(User).filter(User.username == username).first()
+            return user
+        finally:
+            db.close()
     except jwt.ExpiredSignatureError:
         return None
     except jwt.PyJWTError:
