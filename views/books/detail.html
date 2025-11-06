@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+<div class="book-detail">
+    <div class="book-image">
+        {% if book.img %}
+            <img src="{{ book.img }}" alt="Portada de {{ book.title }}">
+        {% else %}
+            <div class="no-image">Sin imagen</div>
+        {% endif %}
+    </div>
+
+    <div class="book-info">
+        <h2>{{ book.title }}</h2>
+        <p class="author">por <strong>{{ book.author }}</strong></p>
+        <p><strong>Género:</strong> {{ book.genre }}</p>
+
+        {% if book.description %}
+            <p class="description"><strong>Descripción:</strong> {{ book.description }}</p>
+        {% endif %}
+
+        <div class="book-meta-grid">
+            <div><strong>ISBN:</strong> {{ book.isbn }}</div>
+            <div><strong>Formato:</strong> {{ book.bookformat }}</div>
+            <div><strong>Páginas:</strong> {{ book.pages }}</div>
+            <div><strong>Rating:</strong> {{ book.rating }}</div>
+            <div><strong>Precio:</strong> ${{ "{:,}".format(book.price) }}</div>
+
+            {% if book.stock > 0 %}
+                <div><strong>Stock:</strong> {{ book.stock }} unidades disponibles</div>
+            {% else %}
+                <div><strong>Stock:</strong> 
+                    <span style="color:red;font-weight:bold">No disponible actualmente</span>
+                </div>
+            {% endif %}
+
+            <div><strong>Total Ratings:</strong> {{ book.totalratings }}</div>
+        </div>
+
+        <div class="book-actions" style="margin-top:15px;">
+            {% if book.stock > 0 %}
+                <form action="/cart/add/{{ book.id }}" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-success"
+                            style="background-color:#28a745;color:white;padding:6px 12px;border:none;border-radius:6px;">
+                        Agregar al carrito
+                    </button>
+                </form>
+            {% else %}
+                <button class="btn btn-secondary" disabled
+                        style="background-color:gray;color:white;padding:6px 12px;border:none;border-radius:6px;">
+                    Sin stock
+                </button>
+            {% endif %}
+
+            <a href="/books" class="btn btn-secondary"
+               style="background-color:#6c757d;color:white;padding:6px 12px;border-radius:6px;text-decoration:none;">
+                Volver
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

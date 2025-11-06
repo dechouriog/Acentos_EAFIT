@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Bienvenido a <span class="highlight">Librería Acentos EAFIT</span></h1>
+    <p>Explora, descubre y disfruta de nuestra colección de libros con una experiencia pensada para lectores apasionados.</p>
+    <a href="/books" class="btn btn-primary">Ver todos los libros</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200" alt="Librería acogedora">
+  </div>
+</section>
+
+<section class="featured-books">
+  <h2 class="section-title">Últimos libros</h2>
+  <div class="book-grid">
+    {% for book in libros %}
+      <div class="book-card">
+        <div class="book-image">
+          {% if book.img %}
+            <img src="{{ book.img }}" alt="Portada de {{ book.title }}">
+          {% else %}
+            <div class="no-image">Sin imagen</div>
+          {% endif %}
+        </div>
+        <div class="book-info">
+          <h3>{{ book.title }}</h3>
+          <p class="author">{{ book.author }}</p>
+          <a href="/books/{{ book.id }}" class="btn btn-secondary btn-sm">Ver más</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="categories">
+  <h2>Explora por género</h2>
+  <div class="category-list">
+    <span class="category">Fantasía</span>
+    <span class="category">Ciencia Ficción</span>
+    <span class="category">Historia</span>
+    <span class="category">Romance</span>
+    <span class="category">Educativo</span>
+    <span class="category">Arte</span>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Librería{% endblock %}</title>
+    <link rel="icon" href="/static/img/acentos.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/pages/home.css') }}">
+    <style>
+        /* Botón flotante del carrito */
+        .cart-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .cart-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/">Librería</a>
+            <a href="/books">Libros</a>
+            <a href="/books/create">Agregar Libro</a>
+
+            {% if request.state.user %}
+                <span>Bienvenido, {{ request.state.user.name }}!</span>
+                <a href="/logout">Cerrar sesión</a>
+            {% else %}
+                <a href="/login">Iniciar sesión</a>
+                <a href="/register">Registrarse</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Botón flotante del carrito -->
+    <a href="/cart" class="cart-btn" title="Ver carrito">🛒</a>
+
+    <footer>
+        <p>© 2025 Librería Acentos</p>
+    </footer>
+</body>
+
+</html>

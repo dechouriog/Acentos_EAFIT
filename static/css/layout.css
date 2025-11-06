@@ -1,0 +1,38 @@
+/* --- layout.css --- */
+
+.navbar {
+  background: var(--color-card);
+  padding: var(--spacing-lg) var(--spacing-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-xs);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  margin-right: var(--spacing-xl);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.navbar a:hover {
+  color: var(--color-primary);
+}
+
+main {
+  max-width: 1200px;
+  margin: var(--spacing-4xl) auto;
+  padding: 0 var(--spacing-2xl);
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--color-card);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 14px;
+}

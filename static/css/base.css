@@ -1,0 +1,91 @@
+/* --- base.css --- */
+
+/* --- variables --- */
+:root {
+  /* Colores principales */
+  --color-primary: #17a2b8;
+  --color-primary-hover: #138496;
+  --color-primary-light: #d1f0f5;
+  --color-primary-dark: #0e7589;  
+  
+  /* Colores secundarios */
+  --color-secondary: #6c757d;
+  --color-secondary-hover: #5a6268;
+  
+  /* Colores de estado */
+  --color-danger: #ef4444;
+  --color-danger-hover: #c0392b;
+  --color-warning: #ffc107;
+  
+  /* Colores de interfaz */
+  --color-bg: #f9fafc;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+  --color-text: #1f2937;
+  --color-text-light: #6c757d;
+  --color-text-muted: #666;
+  
+  /* Backgrounds especiales */
+  --color-bg-light: #f9fafb;
+  --color-bg-hover: #f3f6fa;
+  --color-table-header: #e0f7fa;
+  
+  /* Espaciados consistentes */
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  
+  /* Radios de borde */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  
+  /* Sombras */
+  --shadow-xs: 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-md: 0 6px 20px rgba(0,0,0,0.05);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.07);
+  --shadow-xl: 0 8px 32px rgba(0,0,0,0.1);
+  
+  /* Transiciones */
+  --transition-fast: 0.15s ease;
+  --transition: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
+
+/* --- estilos base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #d1f0f5 0%, #e8f9fb 100%);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}

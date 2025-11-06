@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Libros{% endblock %}
+
+{% block content %}
+<h1>Lista de Libros</h1>
+
+<div class="search-bar">
+  <form method="get" action="/books" class="search-form" role="search">
+    <input type="text" name="q" placeholder="Buscar por título o autor" value="{{ q }}" aria-label="Buscar">
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+</div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ISBN</th>
+            <th>Autor</th>
+            <th>Título</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in libros %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.isbn }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.title }}</td>
+            <td>
+                <div class="btn-group">
+                    <a href="/books/{{ book.id }}" class="btn btn-secondary btn-sm">Ver</a>
+                    <a href="/books/edit/{{ book.id }}" class="btn btn-warning btn-sm">Editar</a>
+                    <form action="/books/delete/{{ book.id }}" method="post" class="inline-form">
+                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="pagination">
+    {% if page > 1 %}
+        <a href="/books?page={{ page - 1 }}{% if q %}&q={{ q }}{% endif %}" class="btn btn-secondary">Anterior</a>
+    {% endif %}
+
+    <span class="page-info">
+        Página {{ page }} de {{ (total // limit) + (1 if total % limit > 0 else 0) }}
+    </span>
+
+    {% if (page * limit) < total %}
+        <a href="/books?page={{ page + 1 }}{% if q %}&q={{ q }}{% endif %}" class="btn btn-secondary">Siguiente</a>
+    {% endif %}
+</div>
+
+{% endblock %}

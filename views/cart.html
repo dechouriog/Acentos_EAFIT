@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Carrito de Compras{% endblock %}
+
+{% block content %}
+<h1>Tu carrito</h1>
+
+{% if cart_items %}
+    <div class="cart-container">
+        {% for item in cart_items %}
+            <div class="cart-item" style="display:flex;align-items:center;gap:10px;margin-bottom:15px;">
+                <img src="{{ item.book.img }}" alt="{{ item.book.title }}" 
+                     style="width:80px;height:100px;object-fit:cover;border-radius:6px;">
+                <div>
+                    <h3>{{ item.book.title }}</h3>
+                    <p>{{ item.book.author }}</p>
+                    <p>Precio: ${{ "{:,}".format(item.book.price) }}</p>
+                    <p>Cantidad: {{ item.quantity }}</p>
+                </div>
+                <form action="/cart/remove/{{ item.book.id }}" method="post" style="margin-left:auto;">
+                    <button class="btn btn-danger"
+                            style="background-color:#dc3545;color:white;border:none;padding:6px 10px;border-radius:6px;">
+                        Eliminar
+                    </button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+    <h3>Total: ${{ "{:,}".format(total) }}</h3>
+
+    <form action="/cart/pay" method="post">
+        <button type="submit" class="btn btn-primary"
+                style="background-color:#007bff;color:white;padding:8px 16px;border:none;border-radius:6px;">
+            Pagar
+        </button>
+    </form>
+
+{% else %}
+    <p>Tu carrito está vacío.</p>
+{% endif %}
+{% endblock %}
