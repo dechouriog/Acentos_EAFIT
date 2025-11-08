@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "About Us | Luxgery" %}{% endblock %}
+
+{% block content %}
+<section class="about-section">
+  <div class="container about-container">
+    <div class="about-text">
+      <h2>{% trans "About Us" %}</h2>
+      <p>
+        {% trans "At Luxgery, we specialize in providing a comprehensive aesthetic tourism experience in Medellín, assisting international patients throughout their entire journey — from travel planning to full recovery." %}
+      </p>
+      <p>
+        {% trans "Our commitment is to offer peace of mind, comfort, and full support by taking care of every detail so that each patient can focus solely on their well-being." %}
+      </p>
+
+      <h3>{% trans "What we offer:" %}</h3>
+      <ul class="about-list">
+        <li>{% trans "Flight management and transfer coordination." %}</li>
+        <li>{% trans "Surgery scheduling with trusted specialists." %}</li>
+        <li>{% trans "Search and booking of suitable recovery houses." %}</li>
+        <li>{% trans "Organization of meals and daily transportation." %}</li>
+        <li>{% trans "Personalized assistance throughout the entire process." %}</li>
+      </ul>
+
+      <p>
+        {% trans "At Luxgery, we work hand in hand with top specialists in aesthetic procedures and postoperative recovery, ensuring the highest standards of quality and safety at every stage." %}
+      </p>
+      <p>
+        {% blocktrans trimmed %}
+        Thanks to these strategic partnerships, we are supported by renowned institutions such as our main ally 
+        <a href="https://darienips.com/" target="_blank" rel="noopener noreferrer">Darien IPS</a>.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="{% static 'img/doctor.jpeg' %}" alt="{% trans 'Our medical team' %}">
+    </div>
+  </div>
+</section>
+{% endblock %}

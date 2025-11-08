@@ -1,0 +1,251 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Luxgery{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* ===== LANGUAGE SWITCHER ===== */
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 1rem;
+            user-select: none;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .language-btn img {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            margin-right: 6px;
+            object-fit: cover;
+            filter: none !important;
+        }
+
+        .language-btn span {
+            font-size: 14px;
+        }
+
+        .language-btn svg {
+            margin-left: 4px;
+            width: 12px;
+            height: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .language-dropdown.open .language-btn svg {
+            transform: rotate(180deg);
+        }
+
+        .language-menu {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            margin-top: 6px;
+            display: none;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .language-dropdown.open .language-menu {
+            display: block;
+        }
+
+        .language-menu form button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            width: 100%;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .language-menu form button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .language-menu img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<header>
+    <nav class="navbar">
+
+        <!-- LEFT LOGO -->
+        <div class="nav-left">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/luxgery.png' %}" alt="Luxgery Logo" class="logo-img">
+            </a>
+        </div>
+
+        <!-- CENTER MENU -->
+        <ul class="nav-menu">
+            <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+            <li><a href="{% url 'services' %}">{% trans "Services" %}</a></li>
+            <li><a href="{% url 'about' %}">{% trans "About Us" %}</a></li>
+            <li><a href="{% url 'testimonios' %}">{% trans "Testimonials" %}</a></li>
+            <li><a href="{% url 'contacto' %}">{% trans "Contact Us" %}</a></li>
+        </ul>
+
+        <!-- RIGHT ICONS + LANGUAGE DROPDOWN -->
+        <div class="nav-social">
+            <a href="https://www.facebook.com/profile.php?id=61581656106854" target="_blank">
+                <img src="{% static 'img/facebook.svg' %}" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/luxgery.us/" target="_blank">
+                <img src="{% static 'img/instagram.svg' %}" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@luxgery" target="_blank">
+                <img src="{% static 'img/tiktok.svg' %}" alt="TikTok">
+            </a>
+
+            <!-- 🌎 LANGUAGE DROPDOWN -->
+            <div class="language-dropdown" id="languageDropdown">
+                <button class="language-btn" type="button" id="currentLangBtn">
+                    <img 
+                        src="{% if request.LANGUAGE_CODE == 'es' %}{% static 'img/co-flag.png' %}{% else %}{% static 'img/us-flag.png' %}{% endif %}" 
+                        alt="Flag" id="currentFlag">
+                    <span id="currentLangText">
+                        {% if request.LANGUAGE_CODE == 'es' %}ES{% else %}EN{% endif %}
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+
+                <div class="language-menu">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}">
+                        <button type="submit" name="language" value="en">
+                            <img src="{% static 'img/us-flag.png' %}" alt="English">
+                            English
+                        </button>
+                    </form>
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}">
+                        <button type="submit" name="language" value="es">
+                            <img src="{% static 'img/co-flag.png' %}" alt="Español">
+                            Español
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="{% static 'img/luxgery.png' %}" alt="Luxgery Logo">
+            <p>{% trans "Company dedicated to medical tourism in Medellín, Colombia." %}</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>{% trans "Location" %}</h3>
+            <p>Cra 43A #34,<br> Torre Médica Sur, CC Almacentro,<br> Medellín - Colombia</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>{% trans "Business Hours" %}</h3>
+            <p>{% trans "Monday to Friday" %}<br>8:00am - 6:00pm</p>
+            <p>{% trans "Saturday" %}<br>8:00am - 12:00pm</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>{% trans "Contact" %}</h3>
+            <p>{% trans "Get in touch:" %} <a href="https://wa.me/573161297843" target="_blank">+57 316 1297843</a></p>
+            <p>Email: <a href="mailto:info@luxgery.com">info@luxgery.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-social">
+            <p>{% trans "Follow us" %}</p>
+            <a href="https://www.facebook.com/profile.php?id=61581656106854" target="_blank"><img src="{% static 'img/facebook.svg' %}" alt="Facebook"></a>
+            <a href="https://www.instagram.com/luxgery.us/" target="_blank"><img src="{% static 'img/instagram.svg' %}" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@luxgery" target="_blank"><img src="{% static 'img/tiktok.svg' %}" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2025 Luxgery. {% trans "All rights reserved." %}</p>
+    </div>
+</footer>
+
+<!-- ====== WHATSAPP BUTTON ====== -->
+<a href="https://wa.me/573161297843?text=Hello!%20I’m%20interested%20in%20your%20services." 
+   class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <img src="{% static 'img/whatsapp.svg' %}" alt="WhatsApp" />
+</a>
+
+<!-- ====== SCROLL EFFECT & LANGUAGE SCRIPT ====== -->
+<script>
+  // Navbar scroll effect
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  // Language dropdown toggle
+  const langDropdown = document.getElementById("languageDropdown");
+  const langBtn = document.getElementById("currentLangBtn");
+
+  langBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!langDropdown.contains(e.target)) {
+      langDropdown.classList.remove("open");
+    }
+  });
+
+  // Optional: reload after changing language
+  document.querySelectorAll('.language-menu form').forEach(form => {
+    form.addEventListener('submit', () => {
+      setTimeout(() => location.reload(), 300);
+    });
+  });
+</script>
+
+</body>
+</html>

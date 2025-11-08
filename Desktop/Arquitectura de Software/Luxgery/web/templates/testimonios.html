@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Testimonials | Luxgery" %}{% endblock %}
+
+{% block content %}
+<section class="testimonios">
+  <div class="container">
+    <h2>{% trans "Testimonials" %}</h2>
+    <div class="testimonios-grid">
+
+      <div class="testimonio-card">
+        <video src="{% static 'videos/testimonios/michell_rivera.mp4' %}" controls></video>
+        <p>{% trans "Michelle Rivera" %}</p>
+      </div>
+
+      <div class="testimonio-card">
+        <video src="{% static 'videos/testimonios/Chris.mp4' %}" controls></video>
+        <p>{% trans "Chris" %}</p>
+      </div>
+
+      <div class="testimonio-card">
+        <video src="{% static 'videos/testimonios/ana_alzate.mp4' %}" controls></video>
+        <p>{% trans "Ana Alzate" %}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

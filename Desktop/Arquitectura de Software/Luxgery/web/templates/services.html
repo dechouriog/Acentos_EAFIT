@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Services | Luxgery" %}{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO CTA ===== -->
+<section class="services-hero">
+  <div class="hero-content">
+    <h1>{% trans "Schedule your valuation appointment" %}</h1>
+    <p>{% trans "We’re here to guide you through every stage of your medical experience." %}</p>
+    <a href="https://wa.me/573161297843?text=Hello!%20I’d%20like%20more%20information%20about%20your%20services." 
+       target="_blank" class="btn-whatsapp">
+      {% trans "Get your personalized quote" %}
+    </a>
+  </div>
+</section>
+
+<!-- ===== GENERAL SERVICES ===== -->
+<section class="luxgery-services">
+  <h2>{% trans "Our Services" %}</h2>
+  <p class="subtitle">
+    {% trans "From flights to recovery houses, we handle everything — your comfort and safety come first." %}
+  </p>
+
+  <div class="service-blocks">
+
+    <div class="service-block">
+      <img src="{% static 'img/flight.svg' %}" alt="{% trans 'Flights' %}">
+      <div class="text">
+        <h3>{% trans "Flight and Travel Coordination" %}</h3>
+        <p>
+          {% trans "We take care of every detail of your trip — from flights and transfers to airport pick-up — so you can arrive in Medellín with total peace of mind." %}
+        </p>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <img src="{% static 'img/recovery.svg' %}" alt="{% trans 'Recovery House' %}">
+      <div class="text">
+        <h3>{% trans "Recovery and Accommodation" %}</h3>
+        <p>
+          {% trans "Stay in our trusted recovery homes, designed for your comfort and full healing experience. Enjoy 24/7 nursing care, healthy meals, and a calm environment to recover safely." %}
+        </p>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <img src="{% static 'img/surgery.svg' %}" alt="{% trans 'Medical Procedures' %}">
+      <div class="text">
+        <h3>{% trans "Medical and Aesthetic Procedures" %}</h3>
+        <p>
+          {% blocktrans trimmed %}
+We coordinate your appointments with top specialists in partnership with 
+<a href="https://darienips.com/" target="_blank" rel="noopener noreferrer"><strong>Darien IPS</strong></a>,
+ensuring quality, safety, and trust in every procedure.
+{% endblocktrans %}
+
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== DETAILED MEDICAL SERVICES (ACCORDION) ===== -->
+<section class="medical-areas">
+  <h2>{% trans "Specialized Medical Areas" %}</h2>
+  <p class="subtitle">{% trans "Explore our procedures organized by category" %}</p>
+
+  <div class="accordion">
+
+    <!-- General Consultation -->
+    <div class="accordion-item active">
+      <button class="accordion-header">
+        {% trans "General Medicine and Surgery" %}
+        <span class="arrow" style="transform: rotate(180deg);">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>{% trans "Outpatient consultation" %}</li>
+          <li>{% trans "General medicine" %}</li>
+          <li>{% trans "Plastic and reconstructive surgery" %}</li>
+          <li>{% trans "Aesthetic medicine" %}</li>
+          <li>{% trans "Anesthesia" %}</li>
+          <li>{% trans "Otolaryngology" %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Minor Procedures -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        {% trans "Minor Ambulatory Procedures" %}
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>{% trans "3D Bichectomy" %}</li>
+          <li>{% trans "Double chin liposuction" %}</li>
+          <li>{% trans "Scar correction" %}</li>
+          <li>{% trans "Mole removal" %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Facial Surgeries -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        {% trans "Facial Surgical Procedures" %}
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>{% trans "Upper and lower blepharoplasty" %}</li>
+          <li>{% trans "Brow lift" %}</li>
+          <li>{% trans "Otoplasty" %}</li>
+          <li>{% trans "Full facelift" %}</li>
+          <li>{% trans "Neck lift" %}</li>
+          <li>{% trans "Cervicoplasty" %}</li>
+          <li>{% trans "Chin augmentation" %}</li>
+          <li>{% trans "Rhinoplasty" %}</li>
+          <li>{% trans "Lip lift" %}</li>
+          <li>{% trans "Frontoplasty" %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Surgeries -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        {% trans "Body Surgical Procedures" %}
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>{% trans "Breast augmentation" %}</li>
+          <li>{% trans "Breast lift (Mastopexy)" %}</li>
+          <li>{% trans "Liposculpture" %}</li>
+          <li>{% trans "Abdominoplasty" %}</li>
+          <li>{% trans "Gluteoplasty" %}</li>
+          <li>{% trans "Labiaplasty" %}</li>
+          <li>{% trans "Breast reduction" %}</li>
+          <li>{% trans "Arm lift (Brachioplasty)" %}</li>
+          <li>{% trans "Thigh lift (Cruroplasty)" %}</li>
+          <li>{% trans "Belly button reconstruction (Omphaloplasty)" %}</li>
+          <li>{% trans "Lipo laser" %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Aesthetic Procedures -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        {% trans "Aesthetic and Non-Surgical Treatments" %}
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>{% trans "Botox" %}</li>
+          <li>{% trans "Hyaluronic acid fillers" %}</li>
+          <li>{% trans "Post-surgical massages" %}</li>
+          <li>{% trans "Lymphatic drainage" %}</li>
+          <li>{% trans "Body contouring massages" %}</li>
+          <li>{% trans "Vitamin C therapy" %}</li>
+          <li>{% trans "Radiesse" %}</li>
+          <li>{% trans "Platelet-rich plasma (PRP)" %}</li>
+          <li>{% trans "Hydrolipoclasia" %}</li>
+          <li>{% trans "Body enzyme therapy" %}</li>
+          <li>{% trans "Muscle and glute toning" %}</li>
+          <li>{% trans "Facial bio-stimulation" %}</li>
+          <li>{% trans "Lip and facial contouring" %}</li>
+          <li>{% trans "Under-eye and double-chin treatment" %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Technology -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        {% trans "Advanced Technology and Equipment" %}
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>{% trans "Ultrasound therapy" %}</li>
+          <li>{% trans "Carboxytherapy" %}</li>
+          <li>{% trans "Sculpt" %}</li>
+          <li>{% trans "Pressotherapy" %}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion Script -->
+  <script>
+    document.querySelectorAll(".accordion-header").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement;
+        const arrow = button.querySelector(".arrow");
+        const isActive = item.classList.contains("active");
+
+        document.querySelectorAll(".accordion-item").forEach(i => {
+          i.classList.remove("active");
+          i.querySelector(".arrow").style.transform = "rotate(0deg)";
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+          arrow.style.transform = "rotate(180deg)";
+        }
+      });
+    });
+  </script>
+
+  <!-- Accordion Style -->
+  <style>
+    .accordion {
+      max-width: 900px;
+      margin: 60px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    .accordion-item {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      background-color: #0078a6;
+      color: white;
+      cursor: pointer;
+      padding: 1.5rem 2rem;
+      border-radius: 14px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .accordion-header:hover {
+      background-color: #48c9b0;
+      transform: translateY(-2px);
+    }
+    .accordion-content {
+      display: none;
+      padding: 1.5rem 2.5rem;
+      background: #f2f9fb;
+      border-radius: 0 0 14px 14px;
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      animation: fadeIn 0.4s ease;
+    }
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+    .accordion-header .arrow {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .accordion ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    .accordion li {
+      margin-bottom: 0.6rem;
+      list-style: disc;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</section>
+
+{% endblock %}

@@ -1,0 +1,657 @@
+# Traducciones al español para Luxgery.
+# Copyright (C) 2025 Luxgery
+# Este archivo se distribuye bajo la misma licencia que el paquete Luxgery.
+# Traducido por Ryu, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Luxgery 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-12 22:04-0500\n"
+"PO-Revision-Date: 2025-10-12 22:00-0500\n"
+"Last-Translator: Ryu <info@luxgery.com>\n"
+"Language-Team: Español <es@luxgery.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Luxgery/settings.py:72
+msgid "English"
+msgstr "Inglés"
+
+#: Luxgery/settings.py:73
+msgid "Spanish"
+msgstr "Español"
+
+#: web/templates/about.html:4
+msgid "About Us | Luxgery"
+msgstr "Sobre Nosotros | Luxgery"
+
+#: web/templates/about.html:10 web/templates/base.html:113
+msgid "About Us"
+msgstr "Sobre Nosotros"
+
+#: web/templates/about.html:12
+msgid ""
+"At Luxgery, we specialize in providing a comprehensive aesthetic tourism "
+"experience in Medellín, assisting international patients throughout their "
+"entire journey — from travel planning to full recovery."
+msgstr ""
+"En Luxgery, nos especializamos en ofrecer una experiencia integral de "
+"turismo estético en Medellín, acompañando a pacientes internacionales "
+"durante todo su proceso — desde la planeación del viaje hasta su completa "
+"recuperación."
+
+#: web/templates/about.html:15
+msgid ""
+"Our commitment is to offer peace of mind, comfort, and full support by "
+"taking care of every detail so that each patient can focus solely on their "
+"well-being."
+msgstr ""
+"Nuestro compromiso es brindar tranquilidad, comodidad y apoyo total, "
+"ocupándonos de cada detalle para que cada paciente pueda concentrarse "
+"únicamente en su bienestar."
+
+#: web/templates/about.html:18
+msgid "What we offer:"
+msgstr "Lo que ofrecemos:"
+
+#: web/templates/about.html:20
+msgid "Flight management and transfer coordination."
+msgstr "Gestión de vuelos y coordinación de traslados."
+
+#: web/templates/about.html:21
+msgid "Surgery scheduling with trusted specialists."
+msgstr "Agendamiento de cirugías con especialistas de confianza."
+
+#: web/templates/about.html:22
+msgid "Search and booking of suitable recovery houses."
+msgstr "Búsqueda y reserva de casas de recuperación adecuadas."
+
+#: web/templates/about.html:23
+msgid "Organization of meals and daily transportation."
+msgstr "Organización de comidas y transporte diario."
+
+#: web/templates/about.html:24
+msgid "Personalized assistance throughout the entire process."
+msgstr "Acompañamiento personalizado durante todo el proceso."
+
+#: web/templates/about.html:28
+msgid ""
+"At Luxgery, we work hand in hand with top specialists in aesthetic "
+"procedures and postoperative recovery, ensuring the highest standards of "
+"quality and safety at every stage."
+msgstr ""
+"En Luxgery trabajamos de la mano con los mejores especialistas en "
+"procedimientos estéticos y recuperación postoperatoria, garantizando los más "
+"altos estándares de calidad y seguridad en cada etapa."
+
+#: web/templates/about.html:31
+msgid ""
+"Thanks to these strategic partnerships, we are supported by renowned "
+"institutions such as our main ally <a href=\"https://darienips.com/\" "
+"target=\"_blank\" rel=\"noopener noreferrer\">Darien IPS</a>."
+msgstr ""
+"Gracias a estas alianzas estratégicas, contamos con el respaldo de "
+"instituciones reconocidas como nuestro principal aliado <a href=\"https://"
+"darienips.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Darien IPS</"
+"a>."
+
+#: web/templates/about.html:39
+msgid "Our medical team"
+msgstr "Nuestro equipo médico"
+
+#: web/templates/base.html:111
+msgid "Home"
+msgstr "Inicio"
+
+#: web/templates/base.html:112
+msgid "Services"
+msgstr "Servicios"
+
+#: web/templates/base.html:114 web/templates/testimonios.html:9
+msgid "Testimonials"
+msgstr "Testimonios"
+
+#: web/templates/base.html:115 web/templates/contacto.html:12
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+#: web/templates/base.html:177
+msgid "Company dedicated to medical tourism in Medellín, Colombia."
+msgstr "Empresa dedicada al turismo médico en Medellín, Colombia."
+
+#: web/templates/base.html:181
+msgid "Location"
+msgstr "Ubicación"
+
+#: web/templates/base.html:186
+msgid "Business Hours"
+msgstr "Horario de atención"
+
+#: web/templates/base.html:187
+msgid "Monday to Friday"
+msgstr "Lunes a viernes"
+
+#: web/templates/base.html:188
+msgid "Saturday"
+msgstr "Sábado"
+
+#: web/templates/base.html:192
+msgid "Contact"
+msgstr "Contacto"
+
+#: web/templates/base.html:193
+msgid "Get in touch:"
+msgstr "Comunícate con nosotros:"
+
+#: web/templates/base.html:200
+msgid "Follow us"
+msgstr "Síguenos"
+
+#: web/templates/base.html:205
+msgid "All rights reserved."
+msgstr "Todos los derechos reservados."
+
+#: web/templates/contacto.html:4
+msgid "Contact - Luxgery"
+msgstr "Contacto - Luxgery"
+
+#: web/templates/contacto.html:14
+msgid ""
+"Fill out the form and our team will get in touch with you as soon as "
+"possible to answer all your questions."
+msgstr ""
+"Completa el formulario y nuestro equipo se pondrá en contacto contigo lo "
+"antes posible para resolver todas tus dudas."
+
+#: web/templates/contacto.html:21
+msgid "Full Name*"
+msgstr "Nombre completo*"
+
+#: web/templates/contacto.html:22
+msgid "First and last name"
+msgstr "Nombres y apellidos"
+
+#: web/templates/contacto.html:26
+msgid "Phone Number*"
+msgstr "Número de teléfono*"
+
+#: web/templates/contacto.html:27
+msgid "+57 300 000 0000"
+msgstr "+57 300 000 0000"
+
+#: web/templates/contacto.html:31
+msgid "Email Address*"
+msgstr "Correo electrónico*"
+
+#: web/templates/contacto.html:32
+msgid "example@email.com"
+msgstr "ejemplo@email.com"
+
+#: web/templates/contacto.html:36
+msgid "Message / Inquiry*"
+msgstr "Mensaje o consulta*"
+
+#: web/templates/contacto.html:37
+msgid "How can we help you?"
+msgstr "¿Cómo podemos ayudarte?"
+
+#: web/templates/contacto.html:40
+msgid "Send"
+msgstr "Enviar"
+
+#: web/templates/contacto.html:54
+msgid "Direct Information"
+msgstr "Información directa"
+
+#: web/templates/contacto.html:55
+msgid "Cra 43A #34, Medellín, Colombia"
+msgstr "Cra 43A #34, Medellín, Colombia"
+
+#: web/templates/contacto.html:56
+msgid "WhatsApp:"
+msgstr "WhatsApp:"
+
+#: web/templates/contacto.html:57
+msgid "Email:"
+msgstr "Correo:"
+
+#: web/templates/contacto.html:63
+msgid "Contact Us - Luxgery"
+msgstr "Contáctanos - Luxgery"
+
+#: web/templates/home.html:4
+msgid "Home | Luxgery"
+msgstr "Inicio | Luxgery"
+
+#: web/templates/home.html:12
+msgid "Your worry-free medical journey in Medellín, Colombia."
+msgstr "Tu experiencia médica sin preocupaciones en Medellín, Colombia."
+
+#: web/templates/home.html:13
+msgid ""
+"We handle every step — so you can focus on feeling and looking your best."
+msgstr ""
+"Nos encargamos de cada paso para que tú solo te enfoques en sentirte y verte "
+"increíble."
+
+#: web/templates/home.html:14
+msgid "Plan your trip with us"
+msgstr "Planea tu viaje con nosotros"
+
+#: web/templates/home.html:22
+msgid "What We Do"
+msgstr "Qué hacemos"
+
+#: web/templates/home.html:23
+msgid ""
+"We manage every step of your medical journey — from arrival to full recovery."
+msgstr ""
+"Gestionamos cada etapa de tu experiencia médica — desde tu llegada hasta la "
+"recuperación total."
+
+#: web/templates/home.html:30 web/templates/services.html:30
+msgid "Flights"
+msgstr "Vuelos"
+
+#: web/templates/home.html:31
+msgid "Flight Management"
+msgstr "Gestión de vuelos"
+
+#: web/templates/home.html:32
+msgid ""
+"Travel with confidence — we take care of flights, transfers, and schedules "
+"so you can relax from the moment you land in Medellín."
+msgstr ""
+"Viaja con tranquilidad — nosotros nos ocupamos de vuelos, traslados y "
+"horarios para que disfrutes desde el momento en que aterrizas en Medellín."
+
+#: web/templates/home.html:36
+msgid "Surgeries"
+msgstr "Cirugías"
+
+#: web/templates/home.html:37
+msgid "Procedure Scheduling"
+msgstr "Agendamiento de procedimientos"
+
+#: web/templates/home.html:38
+msgid ""
+"Your health is in expert hands — we partner only with certified surgeons and "
+"top-rated clinics like Darien IPS to ensure safety and excellence."
+msgstr ""
+"Tu salud está en manos expertas — trabajamos solo con cirujanos certificados "
+"y clínicas de primer nivel como Darien IPS, garantizando seguridad y "
+"excelencia."
+
+#: web/templates/home.html:42 web/templates/home.html:43
+#: web/templates/services.html:40
+msgid "Recovery House"
+msgstr "Casa de recuperación"
+
+#: web/templates/home.html:44
+msgid ""
+"Recover in comfort — stay in our trusted recovery homes with 24/7 nursing, "
+"healthy meals, and personalized post-op care designed for your healing "
+"journey."
+msgstr ""
+"Recupérate con total comodidad — hospédate en nuestras casas de recuperación "
+"de confianza con enfermería 24/7, alimentación saludable y atención "
+"personalizada para tu proceso de sanación."
+
+#: web/templates/home.html:48
+msgid "Transport"
+msgstr "Transporte"
+
+#: web/templates/home.html:49
+msgid "Transport and Assistance"
+msgstr "Transporte y asistencia"
+
+#: web/templates/home.html:50
+msgid ""
+"Enjoy worry-free transfers — our private drivers take you safely from the "
+"airport to your recovery home and every medical appointment, always on time "
+"and with care."
+msgstr ""
+"Disfruta traslados sin preocupaciones — nuestros conductores privados te "
+"llevan con seguridad desde el aeropuerto hasta tu casa de recuperación y "
+"todas tus citas médicas, siempre puntuales y atentos."
+
+#: web/templates/home.html:54
+msgid "Meals"
+msgstr "Comidas"
+
+#: web/templates/home.html:55
+msgid "Personalized Meals"
+msgstr "Comidas personalizadas"
+
+#: web/templates/home.html:56
+msgid ""
+"Nourish your recovery with balanced, doctor-approved meals — prepared daily "
+"to support healing and comfort during your stay."
+msgstr ""
+"Apoya tu recuperación con comidas balanceadas, aprobadas por especialistas — "
+"preparadas diariamente para favorecer tu bienestar y comodidad durante tu "
+"estadía."
+
+#: web/templates/services.html:4
+msgid "Services | Luxgery"
+msgstr "Servicios | Luxgery"
+
+#: web/templates/services.html:11
+msgid "Schedule your valuation appointment"
+msgstr "Agenda tu cita de valoración"
+
+#: web/templates/services.html:12
+msgid "We’re here to guide you through every stage of your medical experience."
+msgstr "Estamos aquí para guiarte en cada etapa de tu experiencia médica."
+
+#: web/templates/services.html:15
+msgid "Get your personalized quote"
+msgstr "Obtén tu cotización personalizada"
+
+#: web/templates/services.html:22
+msgid "Our Services"
+msgstr "Nuestros servicios"
+
+#: web/templates/services.html:24
+msgid ""
+"From flights to recovery houses, we handle everything — your comfort and "
+"safety come first."
+msgstr ""
+"Desde los vuelos hasta tu recuperación, nos encargamos de todo — tu "
+"comodidad y seguridad son nuestra prioridad."
+
+#: web/templates/services.html:32
+msgid "Flight and Travel Coordination"
+msgstr "Coordinación de vuelos y viajes"
+
+#: web/templates/services.html:34
+msgid ""
+"We take care of every detail of your trip — from flights and transfers to "
+"airport pick-up — so you can arrive in Medellín with total peace of mind."
+msgstr ""
+"Nos encargamos de cada detalle de tu viaje — desde los vuelos y traslados "
+"hasta la recogida en el aeropuerto — para que llegues a Medellín con total "
+"tranquilidad."
+
+#: web/templates/services.html:42
+msgid "Recovery and Accommodation"
+msgstr "Recuperación y alojamiento"
+
+#: web/templates/services.html:44
+msgid ""
+"Stay in our trusted recovery homes, designed for your comfort and full "
+"healing experience. Enjoy 24/7 nursing care, healthy meals, and a calm "
+"environment to recover safely."
+msgstr ""
+"Hospédate en nuestras casas de recuperación de confianza, diseñadas para tu "
+"comodidad y una experiencia de sanación completa. Disfruta de atención de "
+"enfermería 24/7, alimentación saludable y un ambiente tranquilo para "
+"recuperarte con seguridad."
+
+#: web/templates/services.html:50
+msgid "Medical Procedures"
+msgstr "Procedimientos médicos"
+
+#: web/templates/services.html:52
+msgid "Medical and Aesthetic Procedures"
+msgstr "Procedimientos médicos y estéticos"
+
+#: web/templates/services.html:54
+msgid ""
+"We coordinate your appointments with top specialists in partnership with <a "
+"href=\"https://darienips.com/\" target=\"_blank\" rel=\"noopener "
+"noreferrer\"><strong>Darien IPS</strong></a>, ensuring quality, safety, and "
+"trust in every procedure."
+msgstr ""
+"Coordinamos tus citas con los mejores especialistas en alianza con <a "
+"href=\"https://darienips.com/\" target=\"_blank\" rel=\"noopener "
+"noreferrer\"><strong>Darien IPS</strong></a>, asegurando calidad, seguridad "
+"y confianza en cada procedimiento."
+
+#: web/templates/services.html:69
+msgid "Specialized Medical Areas"
+msgstr "Áreas médicas especializadas"
+
+#: web/templates/services.html:70
+msgid "Explore our procedures organized by category"
+msgstr "Explora nuestros procedimientos organizados por categoría"
+
+#: web/templates/services.html:77
+msgid "General Medicine and Surgery"
+msgstr "Medicina general y cirugía"
+
+#: web/templates/services.html:82
+msgid "Outpatient consultation"
+msgstr "Consulta externa"
+
+#: web/templates/services.html:83
+msgid "General medicine"
+msgstr "Medicina general"
+
+#: web/templates/services.html:84
+msgid "Plastic and reconstructive surgery"
+msgstr "Cirugía plástica y reconstructiva"
+
+#: web/templates/services.html:85
+msgid "Aesthetic medicine"
+msgstr "Medicina estética"
+
+#: web/templates/services.html:86
+msgid "Anesthesia"
+msgstr "Anestesia"
+
+#: web/templates/services.html:87
+msgid "Otolaryngology"
+msgstr "Otorrinolaringología"
+
+#: web/templates/services.html:95
+msgid "Minor Ambulatory Procedures"
+msgstr "Procedimientos menores ambulatorios"
+
+#: web/templates/services.html:100
+msgid "3D Bichectomy"
+msgstr "Bichectomía 3D"
+
+#: web/templates/services.html:101
+msgid "Double chin liposuction"
+msgstr "Liposucción de papada"
+
+#: web/templates/services.html:102
+msgid "Scar correction"
+msgstr "Corrección de cicatrices"
+
+#: web/templates/services.html:103
+msgid "Mole removal"
+msgstr "Eliminación de lunares"
+
+#: web/templates/services.html:111
+msgid "Facial Surgical Procedures"
+msgstr "Procedimientos quirúrgicos faciales"
+
+#: web/templates/services.html:116
+msgid "Upper and lower blepharoplasty"
+msgstr "Blefaroplastia superior e inferior"
+
+#: web/templates/services.html:117
+msgid "Brow lift"
+msgstr "Lifting de cejas"
+
+#: web/templates/services.html:118
+msgid "Otoplasty"
+msgstr "Otoplastia"
+
+#: web/templates/services.html:119
+msgid "Full facelift"
+msgstr "Lifting facial completo"
+
+#: web/templates/services.html:120
+msgid "Neck lift"
+msgstr "Lifting de cuello"
+
+#: web/templates/services.html:121
+msgid "Cervicoplasty"
+msgstr "Cervicoplastia"
+
+#: web/templates/services.html:122
+msgid "Chin augmentation"
+msgstr "Aumento de mentón"
+
+#: web/templates/services.html:123
+msgid "Rhinoplasty"
+msgstr "Rinoplastia"
+
+#: web/templates/services.html:124
+msgid "Lip lift"
+msgstr "Lifting de labios"
+
+#: web/templates/services.html:125
+msgid "Frontoplasty"
+msgstr "Frontoplastia"
+
+#: web/templates/services.html:133
+msgid "Body Surgical Procedures"
+msgstr "Procedimientos quirúrgicos corporales"
+
+#: web/templates/services.html:138
+msgid "Breast augmentation"
+msgstr "Aumento de senos"
+
+#: web/templates/services.html:139
+msgid "Breast lift (Mastopexy)"
+msgstr "Levantamiento de senos (Mastopexia)"
+
+#: web/templates/services.html:140
+msgid "Liposculpture"
+msgstr "Lipoescultura"
+
+#: web/templates/services.html:141
+msgid "Abdominoplasty"
+msgstr "Abdominoplastia"
+
+#: web/templates/services.html:142
+msgid "Gluteoplasty"
+msgstr "Gluteoplastia"
+
+#: web/templates/services.html:143
+msgid "Labiaplasty"
+msgstr "Labioplastia"
+
+#: web/templates/services.html:144
+msgid "Breast reduction"
+msgstr "Reducción de senos"
+
+#: web/templates/services.html:145
+msgid "Arm lift (Brachioplasty)"
+msgstr "Lifting de brazos (Braquioplastia)"
+
+#: web/templates/services.html:146
+msgid "Thigh lift (Cruroplasty)"
+msgstr "Lifting de muslos (Cruroplastia)"
+
+#: web/templates/services.html:147
+msgid "Belly button reconstruction (Omphaloplasty)"
+msgstr "Reconstrucción del ombligo (Omfaloplastia)"
+
+#: web/templates/services.html:148
+msgid "Lipo laser"
+msgstr "Lipo láser"
+
+#: web/templates/services.html:156
+msgid "Aesthetic and Non-Surgical Treatments"
+msgstr "Tratamientos estéticos y no quirúrgicos"
+
+#: web/templates/services.html:161
+msgid "Botox"
+msgstr "Bótox"
+
+#: web/templates/services.html:162
+msgid "Hyaluronic acid fillers"
+msgstr "Rellenos de ácido hialurónico"
+
+#: web/templates/services.html:163
+msgid "Post-surgical massages"
+msgstr "Masajes postquirúrgicos"
+
+#: web/templates/services.html:164
+msgid "Lymphatic drainage"
+msgstr "Drenaje linfático"
+
+#: web/templates/services.html:165
+msgid "Body contouring massages"
+msgstr "Masajes reductores y de moldeamiento corporal"
+
+#: web/templates/services.html:166
+msgid "Vitamin C therapy"
+msgstr "Terapia con vitamina C"
+
+#: web/templates/services.html:167
+msgid "Radiesse"
+msgstr "Radiesse"
+
+#: web/templates/services.html:168
+msgid "Platelet-rich plasma (PRP)"
+msgstr "Plasma rico en plaquetas (PRP)"
+
+#: web/templates/services.html:169
+msgid "Hydrolipoclasia"
+msgstr "Hidrolipoclasia"
+
+#: web/templates/services.html:170
+msgid "Body enzyme therapy"
+msgstr "Terapia enzimática corporal"
+
+#: web/templates/services.html:171
+msgid "Muscle and glute toning"
+msgstr "Tonificación muscular y de glúteos"
+
+#: web/templates/services.html:172
+msgid "Facial bio-stimulation"
+msgstr "Bioestimulación facial"
+
+#: web/templates/services.html:173
+msgid "Lip and facial contouring"
+msgstr "Perfilado de labios y rostro"
+
+#: web/templates/services.html:174
+msgid "Under-eye and double-chin treatment"
+msgstr "Tratamiento para ojeras y papada"
+
+#: web/templates/services.html:182
+msgid "Advanced Technology and Equipment"
+msgstr "Tecnología y equipos avanzados"
+
+#: web/templates/services.html:187
+msgid "Ultrasound therapy"
+msgstr "Terapia con ultrasonido"
+
+#: web/templates/services.html:188
+msgid "Carboxytherapy"
+msgstr "Carboxiterapia"
+
+#: web/templates/services.html:189
+msgid "Sculpt"
+msgstr "Esculpido corporal (Sculpt)"
+
+#: web/templates/services.html:190
+msgid "Pressotherapy"
+msgstr "Presoterapia"
+
+#: web/templates/testimonios.html:4
+msgid "Testimonials | Luxgery"
+msgstr "Testimonios | Luxgery"
+
+#: web/templates/testimonios.html:14
+msgid "Michelle Rivera"
+msgstr "Michelle Rivera"
+
+#: web/templates/testimonios.html:19
+msgid "Maria Liliana Alzate"
+msgstr "María Liliana Alzate"
+
+#: web/templates/testimonios.html:24
+msgid "Ana Alzate"
+msgstr "Ana Alzate"

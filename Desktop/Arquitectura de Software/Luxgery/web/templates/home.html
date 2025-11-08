@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Home | Luxgery" %}{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-home" style="background-image: url('{% static 'img/quirofano.jpg' %}');">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>{% trans "Your worry-free medical journey in Medellín, Colombia." %}</h1>
+      <p>{% trans "We handle every step — so you can focus on feeling and looking your best." %}</p>
+      <a href="{% url 'services' %}" class="btn">{% trans "Plan your trip with us" %}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / SERVICES SECTION ===== -->
+<section class="about-services">
+  <div class="container">
+    <h2>{% trans "What We Do" %}</h2>
+    <p class="subtitle">{% trans "We manage every step of your medical journey — from arrival to full recovery." %}</p>
+
+    <!-- Carrusel manual sin duplicados -->
+    <div class="services-carousel">
+      <div class="carousel-track">
+
+        <div class="service-card">
+          <img src="{% static 'img/flight.svg' %}" alt="{% trans 'Flights' %}">
+          <h3>{% trans "Flight Management" %}</h3>
+          <p>{% trans "Travel with confidence — we take care of flights, transfers, and schedules so you can relax from the moment you land in Medellín." %}</p>
+        </div>
+
+        <div class="service-card">
+          <img src="{% static 'img/surgery.svg' %}" alt="{% trans 'Surgeries' %}">
+          <h3>{% trans "Procedure Scheduling" %}</h3>
+          <p>{% trans "Your health is in expert hands — we partner only with certified surgeons and top-rated clinics like Darien IPS to ensure safety and excellence." %}</p>
+        </div>
+
+        <div class="service-card">
+          <img src="{% static 'img/recovery.svg' %}" alt="{% trans 'Recovery House' %}">
+          <h3>{% trans "Recovery House" %}</h3>
+          <p>{% trans "Recover in comfort — stay in our trusted recovery homes with 24/7 nursing, healthy meals, and personalized post-op care designed for your healing journey." %}</p>
+        </div>
+
+        <div class="service-card">
+          <img src="{% static 'img/transport.svg' %}" alt="{% trans 'Transport' %}">
+          <h3>{% trans "Transport and Assistance" %}</h3>
+          <p>{% trans "Enjoy worry-free transfers — our private drivers take you safely from the airport to your recovery home and every medical appointment, always on time and with care." %}</p>
+        </div>
+
+        <div class="service-card">
+          <img src="{% static 'img/food.svg' %}" alt="{% trans 'Meals' %}">
+          <h3>{% trans "Personalized Meals" %}</h3>
+          <p>{% trans "Nourish your recovery with balanced, doctor-approved meals — prepared daily to support healing and comfort during your stay." %}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
